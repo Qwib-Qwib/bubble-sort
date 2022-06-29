@@ -4,7 +4,7 @@ def bubble_sort(array)
   return partially_sorted_array if sorted?(original_array, partially_sorted_array) == true  #This checks if the array is already sorted from the start by checking if there's any difference between the sorted array and the original one.
   stored_values = []
   stored_values.push(partially_sorted_array.last)
-  partially_sorted_array.pop  #This command and the previous two are for optimization purpose. Since we know the last value in each iteration will be sorted, there no point in iterating on it, so it's taken out of the array to be sorted and saved for the final return. 
+  partially_sorted_array.pop  #This command and the previous two are for optimization purposes. Since we know the last value in each iteration will be sorted, there no point in iterating on it, so it's taken out of the array-to-be-sorted and saved for the final return. 
   (array.length - 1).times do
     comparison_array = partially_sorted_array.clone
     partially_sorted_array = sorting_pass(partially_sorted_array)
